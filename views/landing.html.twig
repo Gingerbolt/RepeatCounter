@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Word Hunting</title>
+  </head>
+  <body>
+    <div>
+      <form action='/runSearch' method="post">
+        <label for='term'>Find occurences of:</label>
+        <input id='term' name='term' type='text'>
+        <label for='target'>Within this block of text:</label>
+        <input id='target' name='target' type='text'>
+        <button type='submit' class='btn-info'>Run search</button>
+      </form>
+    </div>
+  </body>
+</html>
