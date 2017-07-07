@@ -4,10 +4,12 @@
         function countRepeats($input_term, $input_target)
         {
             $count = 0;
-            $target_array = explode(" ", $input_target);
+            $input_target_filtered = strtoupper($input_target);
+            $input_term_filtered = strtoupper($input_term);
+            $target_array = explode(" ", $input_target_filtered);
             foreach ($target_array as $target)
             {
-                if ($target == $input_term) {
+                if ($target == $input_term_filtered) {
                     ++$count;
                 }
             }

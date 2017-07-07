@@ -38,13 +38,27 @@
           //Arrange
           $testRepeatCounter = new RepeatCounter;
           $input_term = "Marcia";
-          $input_target = "marcia Marcia Marcia!";
+          $input_target = "It is only Marcia";
 
           //Act
           $result = $testRepeatCounter->countRepeats($input_term, $input_target);
 
           //Assert
-          $this->assertEquals("Marcia:marcia Marcia Marcia! MATCH COUNT = 1", $result);
+          $this->assertEquals("Marcia:It is only Marcia MATCH COUNT = 1", $result);
+        }
+
+        function testCountRepeatsMulticapWords()
+        {
+          //Arrange
+          $testRepeatCounter = new RepeatCounter;
+          $input_term = "Marcia";
+          $input_target = "It is only Marcia or marcia";
+
+          //Act
+          $result = $testRepeatCounter->countRepeats($input_term, $input_target);
+
+          //Assert
+          $this->assertEquals("Marcia:It is only Marcia or marcia MATCH COUNT = 2", $result);
         }
     }
 
