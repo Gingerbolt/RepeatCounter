@@ -18,6 +18,34 @@
             //Assert
             $this->assertEquals("count:The first time through.", $result);
         }
+
+        function testCountRepeatsLoneLetter()
+        {
+          //Arrange
+          $testRepeatCounter = new RepeatCounter;
+          $input_term = "T";
+          $input_target = "Hey bart, I'm mr T";
+
+          //Act
+          $result = $testRepeatCounter->countRepeats($input_term, $input_target);
+
+          //Assert
+          $this->assertEquals("T:Hey bart, I'm mr T MATCH COUNT = 1", $result);
+        }
+
+        function testCountRepeatsLoneWord()
+        {
+          //Arrange
+          $testRepeatCounter = new RepeatCounter;
+          $input_term = "Marcia";
+          $input_target = "marcia Marcia Marcia!";
+
+          //Act
+          $result = $testRepeatCounter->countRepeats($input_term, $input_target);
+
+          //Assert
+          $this->assertEquals("Marcia:marcia Marcia Marcia! MATCH COUNT = 1", $result);
+        }
     }
 
 ?>
