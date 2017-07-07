@@ -10,7 +10,7 @@ This project aims to produce a webpage that can count instances of a certain wor
 * Copy URL from GitHub repository
 * Open MAMP server
 * Open terminal then:
-  * $ git clone https://github.com/Gingerbolt
+  * $ git clone https://github.com/Gingerbolt/RepeatCounter.git
   * $ cd word-frequency/web
   * $ php -S localhost:8000
 * Navigate to your preferred browser and navigate to URL localhost:8000
