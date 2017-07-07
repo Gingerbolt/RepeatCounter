@@ -60,6 +60,21 @@
           //Assert
           $this->assertEquals("Marcia:It is only Marcia or marcia MATCH COUNT = 2", $result);
         }
+
+        function testCountRepeatsMulticapSymbolWords()
+        {
+          //Arrange
+          $testRepeatCounter = new RepeatCounter;
+          $input_term = "Marcia";
+          $input_target = "marcia Marcia Marcia! ...Marcia2, %marcia?";
+
+          //Act
+          $result = $testRepeatCounter->countRepeats($input_term, $input_target);
+
+          //Assert
+          $this->assertEquals("Marcia:marcia Marcia Marcia! ...Marcia2, %marcia? MATCH COUNT = 5", $result);
+        }
+
     }
 
 ?>

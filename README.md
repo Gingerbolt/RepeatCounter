@@ -27,13 +27,13 @@ This project aims to produce a webpage that can count instances of a certain wor
 ---(Term and Target selected to show ability to identify only single character instances of the selected target)
 
 * The program can identify and count occurrences of exact copies of the search word
--input: Term: Marcia Target: marcia Marcia Marcia!
--output: Term: Marcia Target: marcia Marcia Marcia! MATCH COUNT = 1
+-input: Term: Marcia Target: It is only Marcia
+-output: Term: Marcia Target: It is only Marcia MATCH COUNT = 1
 ---(Term and target selected to show limitations of search function lifting over next few specs)
 
 * The program ignores case when searching for target terms.
--input: Term: Marcia Target: marcia Marcia Marcia!
--output: Term: Marcia Target: marcia Marcia Marcia! MATCH COUNT = 2
+-input: Term: Marcia Target: It is only Marcia or marcia
+-output: Term: Marcia Target: It is only Marcia or marcia MATCH COUNT = 2
 ---(Term and target selected to show limitations of search function lifting)
 
 * The program ignores punctuation, symbols, and numbers when searching for matches.
